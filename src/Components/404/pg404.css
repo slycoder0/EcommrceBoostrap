@@ -1,0 +1,28 @@
+.container-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+}
+.linkVoltar {
+  width: 150px;
+  border: 0.7px solid rgba(255, 255, 255, 0.342);
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.65s ease-in-out, border 0.5s ease, color 0.65s ease,
+    box-shadow 0.5s ease;
+  margin-block: 2rem;
+}
+
+.linkVoltar:hover {
+  border: 0.7px solid white;
+  transform: scale(1.05);
+  box-shadow: 0px 2px 10px rgba(102, 102, 102, 0.322);
+}
+.title404 {
+  font-size: 2rem;
+  color: rgb(158, 56, 56);
+}
