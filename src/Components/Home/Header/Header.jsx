@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import logo from '../../../assets/imgs/LogoCrystal.png';
 import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa';
 import { FaSearch } from 'react-icons/fa';
+import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
+
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <header>
       <div className='container-header'>
@@ -31,22 +36,39 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <nav>
-        <ul className='navbar'>
+      <nav className='navbar'>
+        <button className='toggle' onClick={() => setNavbarOpen(prev => !prev)}>
+          {navbarOpen ? (
+            <MdClose style={{ width: '32px', height: '32px' }} />
+          ) : (
+            <FiMenu style={{ width: '32px', height: '32px' }} />
+          )}
+        </button>
+        <ul className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}>
           <li>
-            <a>Home</a>
+            <span>
+              <a onClick={() => setNavbarOpen(false)}>Home</a>
+            </span>
           </li>
           <li>
-            <a>Produtos</a>
+            <span>
+              <a onClick={() => setNavbarOpen(false)}>Produtos</a>
+            </span>
           </li>
           <li>
-            <a>Categoria</a>
+            <span>
+              <a onClick={() => setNavbarOpen(false)}>Categoria</a>
+            </span>
           </li>
           <li>
-            <a>Promoções</a>
+            <span>
+              <a onClick={() => setNavbarOpen(false)}>Promoções</a>
+            </span>
           </li>
           <li>
-            <a>Contato</a>
+            <span>
+              <a onClick={() => setNavbarOpen(false)}>Contato</a>
+            </span>
           </li>
         </ul>
       </nav>
