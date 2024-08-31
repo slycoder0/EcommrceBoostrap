@@ -109,3 +109,21 @@ nav ul.navbar {
   font-weight: 800;
   color: #626262;
 }
+
+@media (max-width: 425px) {
+  .container-header {
+    padding: 6px 3px;
+    border-bottom: 2px solid white;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .form-header {
+    display: none;
+  }
+  .logo {
+    width: 5rem;
+  }
+}
