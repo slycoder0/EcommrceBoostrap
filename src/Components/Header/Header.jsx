@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './Header.css';
-import logo from '../../../assets/imgs/LogoCrystal.png';
+import logo from '../../assets/imgs/LogoCrystal.png';
 import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa';
 import { FaSearch } from 'react-icons/fa';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 
-import { NavLink } from 'react-router-dom';
-
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const menuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = event => {
+      // Verifica se o clique foi fora do menu
+      if (
+        navbarOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
+        setNavbarOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [navbarOpen]);
+
   return (
     <header>
       <div className='container-header'>
@@ -37,14 +53,26 @@ const Header = () => {
         </div>
       </div>
       <nav className='navbar'>
-        <button className='toggle' onClick={() => setNavbarOpen(prev => !prev)}>
-          {navbarOpen ? (
-            <MdClose style={{ width: '32px', height: '32px' }} />
-          ) : (
-            <FiMenu style={{ width: '32px', height: '32px' }} />
-          )}
-        </button>
-        <ul className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}>
+        <div className='navbarM'>
+          <button
+            className='toggle'
+            onClick={() => setNavbarOpen(prev => !prev)}
+          >
+            {navbarOpen ? (
+              <MdClose
+                style={{ width: '32px', height: '32px', color: '#000' }}
+              />
+            ) : (
+              <FiMenu
+                style={{ width: '32px', height: '32px', color: '#000' }}
+              />
+            )}
+          </button>
+        </div>
+        <ul
+          ref={menuRef}
+          className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}
+        >
           <li>
             <span>
               <a onClick={() => setNavbarOpen(false)}>Home</a>
