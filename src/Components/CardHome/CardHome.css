@@ -1,0 +1,44 @@
+.CardHomeContent {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+  position: absolute;
+  bottom: -300px;
+  z-index: 999;
+}
+.contentCard {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 30px;
+}
+.contentCard h3 {
+  font-weight: 600;
+}
+.imgRelogio {
+  width: 160px;
+  height: auto;
+  margin-block: 1.125rem;
+}
+.card {
+  width: 33.333%;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin-block: 3rem;
+  border-radius: 10px;
+  box-shadow: 4px 0px 16px black;
+}
+.card1 {
+  background-color: black;
+}
+.card2 {
+  background-color: rgb(162, 122, 82);
+  padding: 10px;
+}
+.card3 {
+  background-color: white;
+  color: black;
+}

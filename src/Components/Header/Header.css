@@ -42,8 +42,9 @@
 
   .ul-icons li:hover {
     font-size: 1.3em;
-    color: green;
+    color: #626262;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   .form-header {
@@ -75,6 +76,7 @@
     font-size: 0.8em;
     transition: 0.7s;
     border: 0.7px solid white;
+    cursor: pointer;
   }
 
   form button:hover {
@@ -109,6 +111,7 @@
     font-size: 16px;
     transition: 0.7s;
     margin-right: 15px;
+    cursor: pointer;
   }
 
   .menu-nav li a:hover {
@@ -135,11 +138,6 @@
     font-weight: 600;
   }
 
-  .ul-icons li:hover {
-    font-size: 1.3em;
-    color: green;
-    border-radius: 5px;
-  }
   .container-header {
     width: 100%;
     display: flex;

@@ -29,7 +29,9 @@ const Header = () => {
   return (
     <header>
       <div className='container-header'>
-        <img className='logo' src={logo} />
+        <a href='#'>
+          <img className='logo' src={logo} />
+        </a>
         <form className='form-header'>
           <FaSearch />
           <input type='text'></input>
