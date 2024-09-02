@@ -1,12 +1,19 @@
 body {
   width: 100%;
-  height: 100;
+  height: 100%;
   align-items: center;
   flex-direction: column;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .main {
+  flex: 1;
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;

@@ -2,4 +2,12 @@ footer {
   text-align: center;
   background-color: #13131381;
   padding-block: 1rem;
+  width: 100%;
+  z-index: 999;
+  margin-top: auto; /* Garante que o footer seja empurrado para o final da página */
+}
+@media (max-width: 768px) {
+  footer {
+    padding-block: 0.5rem;
+  }
 }

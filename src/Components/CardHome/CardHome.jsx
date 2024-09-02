@@ -6,7 +6,10 @@ export default function CardHome() {
     <div className='CardHomeContent'>
       <div className='card1 card'>
         <div className='contentCard'>
-          <h3>NOVA COLEÇÃO</h3>
+          <h3>Nova Coleção</h3>
+          <a href='#' className='btn-card'>
+            Compre Agora
+          </a>
         </div>
         <div className='imgs'>
           <img src={relogio1} alt='' className='imgRelogio' />
@@ -14,7 +17,10 @@ export default function CardHome() {
       </div>
       <div className='card2 card'>
         <div className='contentCard'>
-          <h3>PROMOÇÕES </h3>
+          <h3>Promoções </h3>
+          <a href='#' className='btn-card2'>
+            Compre Agora
+          </a>
         </div>
         <div className='imgs'>
           <img src={relogio1} alt='' className='imgRelogio' />
@@ -22,7 +28,10 @@ export default function CardHome() {
       </div>
       <div className='card3 card'>
         <div className='contentCard'>
-          <h3>EDIÇÃO LIMITADA</h3>
+          <h3>Edição Limitada</h3>
+          <a href='#' className='btn-card'>
+            Compre Agora
+          </a>
         </div>
         <div className='imgs'>
           <img src={relogio1} alt='' className='imgRelogio' />

@@ -5,18 +5,49 @@
   width: 100%;
   max-width: 1200px;
   gap: 2rem;
-  position: absolute;
-  bottom: -300px;
-  z-index: 999;
+  z-index: 99;
+  margin-top: -6em;
+  margin-bottom: 15rem;
 }
 .contentCard {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 10%;
   font-size: 30px;
+  justify-content: space-around;
 }
+
+.btn-card {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 4px 10px;
+  font-weight: 500;
+  transition: 0.7s;
+  border: 0.7px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-card2 {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 4px 10px;
+  font-weight: 500;
+  transition: 0.7s;
+  border: 0.7px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .contentCard h3 {
   font-weight: 600;
+  font-size: 25px;
 }
+
 .imgRelogio {
   width: 160px;
   height: auto;
@@ -31,14 +62,33 @@
   border-radius: 10px;
   box-shadow: 4px 0px 16px black;
 }
+
 .card1 {
   background-color: black;
 }
 .card2 {
-  background-color: rgb(162, 122, 82);
+  background-color: white;
+  color: black;
   padding: 10px;
 }
 .card3 {
-  background-color: white;
-  color: black;
+  background-color: #242424;
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width: 425px) {
+  .CardHomeContent {
+    display: flex;
+    flex-direction: column; /* Empilha os cards verticalmente */
+    z-index: 0;
+    height: auto;
+    margin-top: 1rem;
+    gap: 1rem; /* Reduz o espaçamento entre os cards */
+  }
+
+  .card {
+    width: 100%; /* Faz os cards ocuparem 100% da largura disponível */
+    margin: 10px 0px; /* Ajusta o espaçamento entre os cards */
+  }
 }
